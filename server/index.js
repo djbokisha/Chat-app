@@ -5,6 +5,9 @@ const cors = require("cors");
 const { Server } = require("socket.io");
 app.use(cors());
 
+
+app.get("/", (req,res) =>res.send ("Welcome to our Server"))
+
 const server = http.createServer(app);
 
 const io = new Server(server, {
